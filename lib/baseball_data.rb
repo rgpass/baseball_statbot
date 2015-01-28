@@ -22,8 +22,8 @@ class BaseballData
 
     def import_csv(file)
       puts "Loading #{file}..."
-      data = CSV.read("./lib/#{file}", :headers => true,
-                      :header_converters => :symbol, :converters => [:all]).to_a
+      data = CSV.read("./lib/#{file}", :headers => true, skip_blanks: true,
+                      header_converters: :symbol, converters: [:all]).to_a
       headers = data.shift
       data.map { |r| Hash[*headers.zip(r).flatten] }
     end

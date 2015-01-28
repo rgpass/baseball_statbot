@@ -16,4 +16,4 @@ Display.app_goodbye
 
 # Improve by:
 # # Add validation for all inputs
-# # Allow for blank lines at bottom of CSVs
+# # Finish test suite
